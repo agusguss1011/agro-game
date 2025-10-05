@@ -172,12 +172,6 @@ animation = &"idle_ui_up"
 autoplay = "idle_ui_down"
 frame_progress = 0.8151865
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("1_4flbx")
-hframes = 4
-vframes = 4
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 limit_left = -1000
