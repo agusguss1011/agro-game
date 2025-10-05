@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://cno165oiiihrs"]
+[gd_scene load_steps=27 format=4 uid="uid://cno165oiiihrs"]
 
 [ext_resource type="Texture2D" uid="uid://cvklrkt05r8km" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cxirqwx4he663" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_wtcfe"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dg1y0ho140osf" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Roof_Tilset.png" id="7_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://xwrea0tunb0o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Walls_Tilset.png" id="8_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://vpj2hhjh38y3" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="9_hqns4"]
+[ext_resource type="PackedScene" uid="uid://liwtbr62n0al" path="res://pausa.tscn" id="10_ir8iy"]
 
 [sub_resource type="TileSet" id="TileSet_q6r6c"]
 physics_layer_0/collision_layer = 1
@@ -283,7 +284,7 @@ texture = ExtResource("8_ir8iy")
 1:2/0 = 0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2.7878094, -8, -2.607952, 8, -8, 8)
 3:2/0 = 0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -423,62 +424,62 @@ physics_material_override = SubResource("PhysicsMaterial_q6r6c")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
 position = Vector2(-93.75, -78.74999)
-polygon = PackedVector2Array(0, -1.25, -56.249992, -1.25, -56.249992, -1.25, -56.249992, 12.5, -1.25, 11.25)
+polygon = PackedVector2Array(0, -1.25, -56.249992, -1.25, -56.249992, -1.25, -56.249992, 12.5, 0, 12.5)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
 position = Vector2(-94.99999, -94.99999)
 scale = Vector2(0.99999994, 0.99999994)
-polygon = PackedVector2Array(0, -1.25, -36.25, 0, -36.25, -7.5, 0, -8.75)
+polygon = PackedVector2Array(14.999992, -1.25, -36.250008, -1.25, -36.250008, -8.75, 14.999992, -8.75)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(143.74997, 126.24997)
+position = Vector2(142.49995, 126.24997)
 scale = Vector2(0.9999998, 0.9999998)
-polygon = PackedVector2Array(0, 0, 0, 66.24999, -8.75, 64.99999, -5, -1.25)
+polygon = PackedVector2Array(0, 0, 3.0517578e-05, 65.00004, -8.75, 64.99999, -5, -1.25)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(159.99994, 126.24996)
+position = Vector2(161.24995, 126.24997)
 scale = Vector2(0.99999976, 0.99999976)
-polygon = PackedVector2Array(-1.25, 0, 0, 66.24999, 5, 66.24999, 2.5, 0)
+polygon = PackedVector2Array(6.1035156e-05, -1.2499638, 0, 66.24999, 5, 66.24999, 5.000061, 3.8146973e-05)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(366.24982, 302.49988)
+position = Vector2(366.24985, 301.24988)
 scale = Vector2(0.99999964, 0.99999964)
 polygon = PackedVector2Array(-1.25, 1.25, 147.49997, 1.25, 147.49997, -3.75, 0, -3.75, 0, -1.25)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(367.4998, 321.24985)
+position = Vector2(367.50003, 322.5)
 scale = Vector2(0.9999995, 0.9999995)
-polygon = PackedVector2Array(-2.5, -1.25, 147.49997, 0, 147.49997, 6.25, -1.25, 7.5)
+polygon = PackedVector2Array(-2.5, -1.25, 147.50021, -1.2498474, 147.50021, 7.5001526, -1.25, 7.5)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
 position = Vector2(193.74988, 413.7498)
 scale = Vector2(0.99999946, 0.99999946)
-polygon = PackedVector2Array(-1.2500153, 0, -1.5258789e-05, 116.25, 6.2499847, 116.25, 4.9999847, -1.25)
+polygon = PackedVector2Array(0.00012207031, 0.00018310547, -1.5258789e-05, 116.25, 6.2499847, 116.25, 6.250122, 0.00018310547)
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
 position = Vector2(174.99986, 414.9998)
 scale = Vector2(0.9999994, 0.9999994)
-polygon = PackedVector2Array(-1.25, -2.5, 0, 115, -10, 115, -8.75, -3.75)
+polygon = PackedVector2Array(0.0001373291, -2.499817, 0, 115, -10, 115, -9.999863, -2.499817)
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(-162.49992, 321.24985)
+position = Vector2(-162.5, 323.75)
 scale = Vector2(0.99999934, 0.99999934)
-polygon = PackedVector2Array(-1.25, -1.25, 84.99999, -2.5, 84.99999, 6.25, -1.25, 6.25)
+polygon = PackedVector2Array(-1.2500153, -2.5, 84.99999, -2.5, 84.99999, 6.25, -1.25, 6.25)
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
 position = Vector2(-161.24991, 303.74985)
 scale = Vector2(0.9999992, 0.9999992)
-polygon = PackedVector2Array(-1.25, 0, 83.74999, 1.25, 83.74999, -7.5, -2.5, -10)
+polygon = PackedVector2Array(-1.25, 0, 83.74997, 0.00015258789, 83.74999, -7.5, -1.2500916, -7.4998474)
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(749.9993, 444.9997)
+position = Vector2(749.99927, 444.9997)
 scale = Vector2(0.99999917, 0.99999917)
-polygon = PackedVector2Array(0, -1.25, 1.25, 70, -8.75, 70, -8.75, -3.75)
+polygon = PackedVector2Array(1.2507324, -1.2496948, 1.25, 70, -8.75, 70, -8.749329, -1.2496948)
 
 [node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="TilemapLayers/foreground/StaticBody2D"]
-position = Vector2(769.99927, 446.24966)
+position = Vector2(771.24927, 446.24963)
 scale = Vector2(0.9999991, 0.9999991)
-polygon = PackedVector2Array(-2.5, -1.25, -2.5, 65, 5, 65, 2.5, -3.75)
+polygon = PackedVector2Array(-2.5, -1.25, -2.4993286, 67.50043, 5.0006714, 67.50043, 5.0006714, -1.2496338)
 
 [node name="Node2D2" parent="TilemapLayers" instance=ExtResource("6_kdubu")]
 position = Vector2(193.74998, 175.99998)
@@ -495,3 +496,9 @@ tile_set = SubResource("TileSet_flf07")
 [node name="Node2D" parent="TilemapLayers" instance=ExtResource("3_epypp")]
 position = Vector2(428.74982, 197.49997)
 scale = Vector2(1.2499995, 1.2499995)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("10_ir8iy")]
+process_mode = 3
+visible = false
