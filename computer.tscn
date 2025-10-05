@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnvbr5laabc8c"]
+
+[ext_resource type="Texture2D" uid="uid://dub1t21me8148" path="res://Modern/Tileset_ModernHouse_StorageOffice_Rasak.png" id="1_18hgq"]
+[ext_resource type="PackedScene" uid="uid://ce25lm6cd2efk" path="res://interact.tscn" id="2_gcbbq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jr5mb"]
+size = Vector2(10.024124, 11.951836)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4xfga"]
+radius = 17.954828
+
+[node name="Area2D" type="Area2D"]
+
+[node name="TilesetModernHouseStorageOfficeRasak" type="Sprite2D" parent="."]
+position = Vector2(0.31632996, -0.1825943)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_18hgq")
+hframes = 16
+vframes = 16
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.096328735, -0.14460373)
+shape = SubResource("RectangleShape2D_jr5mb")
+
+[node name="Area2D" parent="." instance=ExtResource("2_gcbbq")]
+interact_name = "Enter to Interact"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4xfga")

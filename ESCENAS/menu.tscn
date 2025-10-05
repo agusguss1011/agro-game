@@ -1,18 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://fsavd8df21wt"]
+[gd_scene load_steps=13 format=3 uid="uid://fsavd8df21wt"]
 
 [ext_resource type="Script" uid="uid://d2wqqajkf845u" path="res://ESCENAS/menu.gd" id="1_x7w41"]
+[ext_resource type="Texture2D" uid="uid://036gymkx8jyl" path="res://01.png" id="2_bf3yy"]
 [ext_resource type="Texture2D" uid="uid://cp2qpqsa66wvv" path="res://background 2/1.png" id="2_igffm"]
 [ext_resource type="Texture2D" uid="uid://2d56onbvt1vs" path="res://background 2/2.png" id="3_deise"]
+[ext_resource type="FontFile" uid="uid://bta036dbo64kw" path="res://Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="3_otbiq"]
 [ext_resource type="Texture2D" uid="uid://dt7hoxcw4wxib" path="res://background 2/3.png" id="4_r7ei6"]
 [ext_resource type="Texture2D" uid="uid://b468bsyptf2d8" path="res://background 2/4.png" id="5_v1gg8"]
 [ext_resource type="Texture2D" uid="uid://ceijp6qqdjjch" path="res://background 2/5.png" id="6_bf3yy"]
 [ext_resource type="Texture2D" uid="uid://b82k75gr8wh4g" path="res://background 1/AgroHeroe.png" id="7_deise"]
+[ext_resource type="Texture2D" uid="uid://bwl7y5scbei1e" path="res://AgroHero.png" id="10_hco84"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otbiq"]
-bg_color = Color(0.9938937, 0.36650383, 0, 1)
+bg_color = Color(0.99215686, 0.3647059, 0, 0.6431373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igffm"]
-bg_color = Color(1, 0.35441566, 0.13463992, 1)
+bg_color = Color(1, 0.3529412, 0.13333334, 0.7254902)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -37,13 +40,28 @@ offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="01" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(84, 48)
+scale = Vector2(3, 4.0277777)
+texture = ExtResource("2_bf3yy")
+hframes = 4
+vframes = 9
+frame = 12
+
 [node name="STARTButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 0.58431375, 0.44313726, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_otbiq")
 theme_override_styles/focus = SubResource("StyleBoxFlat_otbiq")
 text = "START GAME"
 
 [node name="QUITButton2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 0.58431375, 0.44313726, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_otbiq")
 theme_override_styles/focus = SubResource("StyleBoxFlat_igffm")
 text = "QUIT"
 
@@ -74,9 +92,15 @@ scale = Vector2(0.99586785, 1.0257354)
 texture = ExtResource("6_bf3yy")
 
 [node name="AgroHeroe" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(238.99998, 90)
 scale = Vector2(0.7575251, 0.792056)
 texture = ExtResource("7_deise")
+
+[node name="AgroHero" type="Sprite2D" parent="."]
+position = Vector2(244.00002, 100)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_hco84")
 
 [connection signal="pressed" from="VBoxContainer/STARTButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QUITButton2" to="." method="_on_quit_button_2_pressed"]

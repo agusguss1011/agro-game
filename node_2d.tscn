@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cno165oiiihrs"]
+[gd_scene load_steps=28 format=4 uid="uid://cno165oiiihrs"]
 
 [ext_resource type="Texture2D" uid="uid://cvklrkt05r8km" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cxirqwx4he663" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_wtcfe"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dg1y0ho140osf" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Roof_Tilset.png" id="7_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://xwrea0tunb0o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Walls_Tilset.png" id="8_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://vpj2hhjh38y3" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="9_hqns4"]
+[ext_resource type="PackedScene" uid="uid://dnvbr5laabc8c" path="res://computer.tscn" id="9_x0ka3"]
 [ext_resource type="PackedScene" uid="uid://liwtbr62n0al" path="res://pausa.tscn" id="10_ir8iy"]
 
 [sub_resource type="TileSet" id="TileSet_q6r6c"]
@@ -492,6 +493,10 @@ tile_set = SubResource("TileSet_d2bti")
 scale = Vector2(0.99999994, 0.99999994)
 tile_map_data = PackedByteArray("AAD1//H/AAAAAAAAAAD3//L/AAABAAIAAAD3//H/AAABAAEAAADz//T/AAADAAMAAAD0//T/AAAFAAIAAADy//T/AAAEAAIAAADy//f/AAADAAAAAAD1//L/AAAHAAUAAAD2//L/AAAIAAUAAADz//P/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_flf07")
+
+[node name="Area2D" parent="TilemapLayers" instance=ExtResource("9_x0ka3")]
+position = Vector2(-199.98242, -190.72685)
+scale = Vector2(1.2499994, 1.2499994)
 
 [node name="Node2D" parent="TilemapLayers" instance=ExtResource("3_epypp")]
 position = Vector2(428.74982, 197.49997)

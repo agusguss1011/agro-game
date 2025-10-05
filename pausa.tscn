@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://liwtbr62n0al"]
+[gd_scene load_steps=3 format=3 uid="uid://liwtbr62n0al"]
 
 [ext_resource type="Script" uid="uid://djkxnjlk7t08h" path="res://pausa.gd" id="1_wk6u8"]
+[ext_resource type="FontFile" uid="uid://bdnt86kko3pbk" path="res://Abaddon_Fonts_v1.2/Abaddon Light.ttf" id="2_4gdby"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,5 +34,6 @@ offset_right = 85.25
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_4gdby")
 text = "    GAME IS PAUSED 
 PRESS P TO UNPAUSE"
